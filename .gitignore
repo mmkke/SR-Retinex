@@ -1,0 +1,46 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local tooling
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Generated outputs
+retinex2_output/
+
+# Datasets and large image assets
+data/submission_images/
+data/chatgpt/
+*.tif
+*.tiff
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.npy
+*.npz
+
+# Model checkpoints and other large binaries
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.h5
+*.pkl
+*.joblib
