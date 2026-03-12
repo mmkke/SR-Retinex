@@ -1,6 +1,10 @@
 # SR-Retinex
 
-Retinex-based image enhancement pipeline for 16-bit images, with optional ISD map prediction from a ViT model checkpoint.
+SR-Retinex is a Retinex-based illumination equalization pipeline for 16-bit linear RGB images that combines classical illumination estimation with learned spectral-ratio (ISD) maps.
+
+The method estimates a scalar illumination field using Recursive Retinex and applies a color-consistent correction in log-RGB space by shifting pixels along predicted illumination directions. This allows illumination changes (e.g., shadows) to be adjusted without introducing hue shifts.
+
+The Vision Transformer model predicts per-pixel illumination direction maps used to guide the correction.
 
 ## Setup
 
