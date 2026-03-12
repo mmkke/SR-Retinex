@@ -1,5 +1,10 @@
 # Recursive Retinex (Zhang 2011) + ISD-based Illumination Equalization
 
+<p align="center">
+  <img src="docs/readme_assets/supp_fig_final.png" width=80%>
+</p>
+
+---
 
 ## 1) Read and normalize the input image
 
