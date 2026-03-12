@@ -137,11 +137,13 @@ class ISDMapEstimator:
             processed /= 11.1  # normalize to [0, 1]
 
         else:
+            # assert image.min() >= 0
+            # assert image.max() <= 65535
+
+            # processed = image / 65535.0  # normalize to [0, 1]
             assert image.min() >= 0
-            assert image.max() <= 65535
-
-            processed = image / 65535.0  # normalize to [0, 1]
-
+            assert image.max() <= 1.0
+            processed = image
         input_tensor = (
             torch.from_numpy(processed.transpose(2, 0, 1))
             .unsqueeze(0)
@@ -174,7 +176,7 @@ class ISDMapEstimator:
         # image = self._reshape_image(image)
         input_tensor = self._preprocess_image(image, log=False)
 
-        with torch.no_grad():
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              with torch.no_grad():
             output = self.model(input_tensor)
 
         output_np = output.squeeze(0).permute(1, 2, 0).cpu().numpy()

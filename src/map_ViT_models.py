@@ -307,7 +307,7 @@ class ViT_Patch2Patch_ver3(nn.Module):
         pad_h = H2 - H
         pad_w = W2 - W
         if pad_h == 0 and pad_w == 0:
-            return x, (0, 0, H, W)
+            return x, (0, 0, 0, 0), (H, W)
         # pad = (left, right, top, bottom)
         x = F.pad(x, (0, pad_w, 0, pad_h), mode="reflect")
         return x, (0, pad_w, 0, pad_h), (H, W)

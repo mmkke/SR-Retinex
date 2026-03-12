@@ -19,5 +19,7 @@ for img in "$INPUT_DIR"/*.tif; do
         --input "$img" \
         --output_dir "$OUTPUT_DIR" \
         --use_model \
-        --chatgpt
+        --model_type "vit" \
+
+
 done
