@@ -98,3 +98,11 @@ python src/plot_metrics.py
 - The default model path is `model/vit_12_linear.pth`.
 - `--use_model` uses the ViT-based ISD estimator.
 - All Python source files live directly under `src/`.
+
+## License
+
+All rights reserved.
+
+This code is released for academic review only.
+Commercial use, redistribution, or derivative works
+are not permitted without written permission.
